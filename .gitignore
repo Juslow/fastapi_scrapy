@@ -16,3 +16,6 @@ venv/
 .venv
 vscode/
 .idea/
+test.py
+.env
+
