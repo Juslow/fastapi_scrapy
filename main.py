@@ -37,6 +37,7 @@ def run_spider_sync():
     )
 
 
+# С запуском программы запускает scrapy spider
 @app.on_event("startup")
 async def start_background_tasks():
     loop = asyncio.get_event_loop()

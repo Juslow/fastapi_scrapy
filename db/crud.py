@@ -52,12 +52,13 @@ def city_coordinates(city_name: str):
         }
 
 
+# 6. Возврат списка городов
 def city_list(db: Session):
     """Returns a list of all cities in database"""
     return db.query(models.City).all()
     
 
-# Проверка наличия города в базе данных
+# 7. Проверка наличия города в базе данных
 def city_in_db(db: Session, city_name: str) -> bool:
     """Checks if city is already in the database"""
     db_city_check = db.query(models.City).filter_by(name=city_name).first()

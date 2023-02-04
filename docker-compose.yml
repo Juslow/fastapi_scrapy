@@ -1,20 +1,16 @@
 version: '3'
 services:
-  web:
-    image: app-test
-    build: .
-    environment:
-      APPID: 12ccdf79474e14750faf353df0a149dc
-      MYSQL_USER: root
-      MYSQL_PASSWORD: Dvw93)fw2M
-      MYSQL_HOST: localhost
-      MYSQL_DB: test_db
-    ports:
-      - "8001:8000"
   db:
     image: mysql:8.0
     environment:
-      MYSQL_ROOT_PASSWORD: Dvw93)fw2M
-      MYSQL_DATABASE: test_db
+      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_DATABASE: app_db
     ports:
       - "3307:3306"
+  web:
+    image: app-test
+    build: .
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"

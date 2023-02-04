@@ -22,9 +22,11 @@ incremental==22.10.0
 itemadapter==0.7.0
 itemloaders==1.0.6
 jmespath==1.0.1
-jsonschema==4.17.3
 lxml==4.9.2
+mysql==0.0.3
 mysql-connector-python==8.0.32
+mysql-connector-python-rf==2.2.2
+mysqlclient==2.1.1
 packaging==23.0
 parsel==1.7.0
 Protego==0.2.1
@@ -35,8 +37,6 @@ pycparser==2.21
 pydantic==1.10.4
 PyDispatcher==2.0.6
 pyOpenSSL==23.0.0
-pyproject-toml==0.0.10
-pyrsistent==0.19.3
 python-dotenv==0.21.1
 PyYAML==6.0
 queuelib==1.6.2
@@ -50,7 +50,6 @@ sniffio==1.3.0
 SQLAlchemy==1.4.46
 starlette==0.22.0
 tldextract==3.4.0
-toml==0.10.2
 Twisted==22.10.0
 typing_extensions==4.4.0
 urllib3==1.26.14

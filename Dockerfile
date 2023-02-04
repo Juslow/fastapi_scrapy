@@ -7,17 +7,14 @@ WORKDIR /app
 # Copy the requirements.txt file to the container
 COPY requirements.txt /app
 
+# Install the necessary libraries for building and linking
+RUN apk add --no-cache mariadb-dev gcc musl-dev python3-dev
+
 # Install the dependencies
 RUN pip install -r requirements.txt
 
 # Copy the rest of the application code to the container
 COPY . /app
-
-ENV APPID=12ccdf79474e14750faf353df0a149dc
-ENV MYSQL_USER=root
-ENV MYSQL_PASSWORD=Dvw93)fw2M
-ENV MYSQL_DB=test_db
-ENV MYSQL_HOST=localhost
 
 # Specify the command to run when the container starts
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
