@@ -8,7 +8,7 @@ class City(Base):
     __tablename__ = "city"
 
     id = Column(Integer, primary_key=True)
-    name = Column(String, unique=True)
+    name = Column(String(64), unique=True)
     lon = Column(Float)
     lat = Column(Float)
 
@@ -20,7 +20,7 @@ class WeatherInfo(Base):
 
     id = Column(Integer, primary_key=True)
     city_id = Column(Integer, ForeignKey("city.id"))
-    city_name = Column(String)
+    city_name = Column(String(64))
     date_time = Column(DateTime)
     temperature = Column(Float)
     atm_pressure = Column(Float)
